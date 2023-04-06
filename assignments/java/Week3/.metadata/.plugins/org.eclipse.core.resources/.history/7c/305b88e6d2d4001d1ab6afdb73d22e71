@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header>
+		<h1>Add a Book to Your Shelf</h1>
+		<nav>
+			<a href="/">Home</a>
+			<c:if test="${ user_id != null }">
+				<a href="/dashboard">Dashboard</a>
+				<a href="/addPuppy">Add Puppy</a>
+				<a href="/logout">Logout</a>
+			</c:if>
+			<c:if test="${ user_id == null }">
+				<a href="/logReg">Login</a>
+			</c:if>
+		</nav>
+	</header>
+
+</body>
+</html>

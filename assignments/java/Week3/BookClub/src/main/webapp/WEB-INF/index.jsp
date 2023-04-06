@@ -21,14 +21,16 @@
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 <meta charset="UTF-8">
-<title>Our Family Pets</title>
+<title>Book Club</title>
 </head>
 <body>
 	<header>
-		<nav>
-		
-		</nav>
+		<h1>Add a Book to Your Shelf</h1>
 	</header>
+	<section>
+		<h1>Book Club</h1>
+		<p>A place for friends to share thoughts on books.</p>
+	</section>
 	<main class="container">
 		<section class="register">
 			<h1>Register</h1>

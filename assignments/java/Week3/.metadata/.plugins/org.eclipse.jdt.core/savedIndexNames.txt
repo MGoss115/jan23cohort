@@ -40,7 +40,6 @@ INDEX VERSION 1.131+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignme
 94538678.index
 24709123.index
 3983603122.index
-89865378.index
 3495967930.index
 3709887008.index
 3989831493.index

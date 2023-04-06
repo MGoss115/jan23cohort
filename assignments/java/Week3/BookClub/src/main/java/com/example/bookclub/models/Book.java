@@ -13,8 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -26,18 +25,16 @@ public class Book {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotNull
+    @NotBlank
     @Size(min = 5, max = 200)
     private String title;
-    @NotNull
+    @NotBlank
     @Size(min = 5, max = 200)
-    private String description;
-    @NotNull
+    private String author;
+    @NotBlank
     @Size(min = 3, max = 40)
-    private String language;
-    @NotNull
-    @Min(100)
-    private Integer numberOfPages;
+    private String description;
+ 
     // This will not allow the createdAt column to be updated after creation
     @Column(updatable=false)
     @DateTimeFormat(pattern="yyyy-MM-dd")
@@ -81,28 +78,20 @@ public class Book {
 		this.title = title;
 	}
 
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
 	public String getDescription() {
 		return description;
 	}
 
 	public void setDescription(String description) {
 		this.description = description;
-	}
-
-	public String getLanguage() {
-		return language;
-	}
-
-	public void setLanguage(String language) {
-		this.language = language;
-	}
-
-	public Integer getNumberOfPages() {
-		return numberOfPages;
-	}
-
-	public void setNumberOfPages(Integer numberOfPages) {
-		this.numberOfPages = numberOfPages;
 	}
 
 	public Date getCreatedAt() {
@@ -120,10 +109,11 @@ public class Book {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+
 	public User getOwner() {
 		return owner;
 	}
-	
+
 	public void setOwner(User owner) {
 		this.owner = owner;
 	}

@@ -1,0 +1,5 @@
+package com.example.burgertracker.models;
+
+public class BurgerModel {
+
+}

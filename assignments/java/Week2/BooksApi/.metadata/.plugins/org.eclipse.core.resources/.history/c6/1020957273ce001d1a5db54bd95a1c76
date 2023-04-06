@@ -1,0 +1,29 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- for forms -->
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<!-- for validation -->
+<%@ page isErrorPage="true" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Our Family Pets</title>
+</head>
+<body>
+	<header>
+		<h1>Testing</h1>
+		<nav>
+		
+		</nav>
+	</header>
+	<main>
+	
+	</main>
+	<footer>
+	
+	</footer>
+</body>
+</html>

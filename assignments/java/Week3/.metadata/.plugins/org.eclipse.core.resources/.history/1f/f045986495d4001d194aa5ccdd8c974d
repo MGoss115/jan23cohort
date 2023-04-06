@@ -1,0 +1,41 @@
+package com.example.authentication.services;
+
+import java.util.Optional;
+
+import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.validation.BindingResult;
+
+import com.example.authentication.models.LoginUser;
+import com.example.authentication.models.User;
+import com.example.authentication.repositories.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	public User register(User newUser, BindingResult result) {
+		Optional<User> potentialUser = userRepository.findByEmail(newUser.getEmail());
+		if(potentialUser.isPresent()) {
+			result.rejectValue("email", "error.email", "Email address already in use...Do you have an account?");
+		}
+		if(!newUser.getPassword().equals(newUser.getConfirm())) {
+		    result.rejectValue("confirm", "Matches", "The Confirm Password must match Password!");
+		}
+		if(result.hasErrors()) {
+			return null;
+		}
+		String hashed = BCrypt.hashpw(newUser.getPassword(), BCrypt.gensalt());
+		newUser.setPassword(hashed);
+		return userRepository.save(newUser);
+		
+	}
+	
+	public User login(LoginUser newLoginObject, BindingResult result) {
+		return null;
+	}
+
+}

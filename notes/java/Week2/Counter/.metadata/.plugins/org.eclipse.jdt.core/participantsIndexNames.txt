@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/notes/java/Counter/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3246369186.index
+/GoldGame/src/main/java
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/notes/java/PracticeFile/Counter/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3357930863.index
+/Counter/src/main/java
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/notes/java/Counter/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3357930863.index
+/Counter/src/main/java

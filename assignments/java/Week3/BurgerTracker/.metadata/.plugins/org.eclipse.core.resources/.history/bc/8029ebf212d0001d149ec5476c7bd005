@@ -1,0 +1,25 @@
+package com.example.burgertracker.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.burgertracker.models.Burger;
+import com.example.burgertracker.services.BurgerService;
+
+@Controller
+public class BurgerController {
+	
+	@Autowired
+	BurgerService burgerService;
+	
+	@GetMapping("/")
+	public String index(Model model) {
+		List<Burger> burgers = burgerService.allburgers();
+		model.addAttribute("burgers", burgers);
+		return "index.jsp";
+	}
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week3/BurgerTracker/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3107385652.index
+1571368796.index
+2491489170.index
+1217191371.index
+314418382.index
+1305403696.index

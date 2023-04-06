@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/notes/java/Week3/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+2848472797.index
+2421399996.index
+1002033209.index
+2324857911.index
+2268756950.index
+3239566934.index
+3615830935.index
+2421399996.index
+783965325.index

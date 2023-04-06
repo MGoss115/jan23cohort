@@ -1,0 +1,6 @@
+@charset "UTF-8";
+
+td {
+	color: red;
+	padding: 70px;
+}

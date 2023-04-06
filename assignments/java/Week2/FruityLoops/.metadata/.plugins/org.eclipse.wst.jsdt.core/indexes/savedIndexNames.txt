@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week2/FruityLoops/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1129078029.index
+2684004810.index
+1684285562.index
+235158581.index
+3738750826.index
+3344242340.index

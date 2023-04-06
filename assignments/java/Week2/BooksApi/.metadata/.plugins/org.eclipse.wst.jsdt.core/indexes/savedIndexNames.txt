@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week2/BooksApi/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+738807278.index
+1217208679.index
+3258064624.index
+2839383212.index
+4241501210.index
+2848199452.index

@@ -1,0 +1,5 @@
+package com.example.relationships.models;
+
+public class License {
+
+}

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+td {
+	color: red;
+	padding-left: 70px;
+}
+
+.col {
+	display: flex;
+	flex-direction: row;
+}

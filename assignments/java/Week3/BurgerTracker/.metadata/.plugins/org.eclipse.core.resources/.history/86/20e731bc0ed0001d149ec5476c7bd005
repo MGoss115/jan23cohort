@@ -1,0 +1,6 @@
+package com.example.burgertracker.services;
+
+@Service
+public class BurgerService {
+	
+}

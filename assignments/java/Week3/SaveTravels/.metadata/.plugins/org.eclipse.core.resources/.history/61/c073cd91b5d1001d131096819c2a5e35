@@ -1,0 +1,27 @@
+package com.example.savetravels.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.example.savetravels.models.Travel;
+import com.example.savetravels.services.TravelService;
+
+@Controller
+public class TravelController {
+	
+	@Autowired
+	TravelService travelService;
+	
+	@GetMapping("/")
+	public String index(@ModelAttribute("travel") Travel travel, Model model) {
+		List<Travel> travels = travelService.allTravels();
+		model.addAttribute("model", model);
+		return "index.jsp";
+	}
+
+}

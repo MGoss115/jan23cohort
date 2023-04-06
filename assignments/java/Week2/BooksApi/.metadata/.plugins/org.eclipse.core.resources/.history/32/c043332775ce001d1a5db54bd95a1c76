@@ -1,0 +1,5 @@
+package com.example.booksapi.models;
+
+public class Book {
+
+}

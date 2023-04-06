@@ -1,0 +1,39 @@
+package com.example.savetravels.models;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="travels")
+public class Travel {
+	
+	@Id
+	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	private Long id;
+	
+	@NotNull
+    @Size(min = 2, max = 200)
+    private String name;
+	
+    @NotNull
+    @Size(min = 2, max = 200)
+    private String vendor;
+    
+    @NotNull
+    @Min(0)
+    private Integer amount;
+    
+    @NotNull
+    private String description;
+	
+    @Column(updatable=false)
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date createdAt;
+    
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date updatedAt;
+
+}

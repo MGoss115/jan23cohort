@@ -1,0 +1,27 @@
+package com.example.ninjas.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.example.ninjas.models.Dojo;
+import com.example.ninjas.services.DojoService;
+
+@Controller
+public class DojoController {
+	
+	@Autowired
+	private DojoService dojoService;
+	
+	@GetMapping("/")
+	public String index(@ModelAttribute("dojo") Dojo dojo, Model model) {
+		List<Dojo> dojos = dojoService.allDojos();
+		model.addAttribute("dojos", dojos);
+		return "index.jsp";
+	}
+
+}

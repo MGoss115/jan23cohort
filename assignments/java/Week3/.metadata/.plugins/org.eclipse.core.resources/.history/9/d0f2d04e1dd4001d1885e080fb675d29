@@ -1,0 +1,20 @@
+body {
+	background-color: #a96192;
+	font-family: "Sofia", sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 50px;
+}
+
+.register {
+	border: 2px dotted white;
+	padding: 25px;
+}
+
+.login {
+	border: 2px dotted gray;
+	padding: 25px;
+}

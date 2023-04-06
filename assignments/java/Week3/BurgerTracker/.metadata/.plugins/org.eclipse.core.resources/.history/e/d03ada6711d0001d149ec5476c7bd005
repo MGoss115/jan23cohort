@@ -1,0 +1,41 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- for forms -->
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
+<!-- for validation -->
+<%@ page isErrorPage="true" %>
+<!DOCTYPE html>
+<html>
+<style>
+table, th, td {
+  border:1px solid black;
+}
+</style>
+<head>
+<meta charset="UTF-8">
+<title>Burger Tracker</title>
+</head>
+<body>
+<header>
+	<h1>Burger Tracker</h1>
+		<nav>
+		
+		</nav>
+	</header>
+	<main>
+		<table style="width:90%">
+			<tr>
+				<th>Burger Name</th>
+				<th>Restaurant Name</th>
+				<th>Rating (out of 5)</th>
+			</tr>
+		</table>
+		<h2>Add a Burger</h2>
+	</main>
+	<footer>
+	
+	</footer>
+</body>
+</html>

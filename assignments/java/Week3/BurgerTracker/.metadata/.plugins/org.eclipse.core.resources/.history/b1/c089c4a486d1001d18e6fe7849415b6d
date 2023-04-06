@@ -1,0 +1,28 @@
+package com.example.burgertracker.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.burgertracker.models.Burger;
+import com.example.burgertracker.repositories.BurgerRepository;
+
+@Service
+public class BurgerService {
+	
+	private final BurgerRepository burgerRepository;
+	
+	public BurgerService(BurgerRepository burgerRepository) {
+		this.burgerRepository = burgerRepository;
+	}
+	
+	// returns all burger
+	public List<Burger> allburgers() {
+		return burgerRepository.findAll();
+	}
+	
+	// creates a burger
+    public Burger createBurger(Burger b) {
+        return burgerRepository.save(b);
+    }
+}

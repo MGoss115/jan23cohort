@@ -1,0 +1,25 @@
+body {
+	background-color: #a96192;
+	font-family: "Sofia", sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 50px;
+}
+
+.register {
+	border: 2px dotted purple;
+	padding: 25px;
+}
+
+.login {
+	border: 2px dotted purple;
+	padding: 25px;
+}
+
+input {
+	background-color: gray;
+	color: white;
+}

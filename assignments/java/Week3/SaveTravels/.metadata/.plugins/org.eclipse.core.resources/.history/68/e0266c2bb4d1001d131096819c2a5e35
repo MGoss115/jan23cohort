@@ -1,0 +1,14 @@
+package com.example.savetravels.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.example.savetravels.services.TravelService;
+
+@Controller
+public class TravelController {
+	
+	@Autowired
+	TravelService travelService;
+
+}

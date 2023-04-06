@@ -1,0 +1,24 @@
+package com.example.savetravels.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.example.savetravels.models.Travel;
+import com.example.savetravels.repositories.TravelRepository;
+
+@Service 
+public class TravelService {
+	
+	private final TravelRepository travelRespository;
+	
+	public TravelService(TravelRepository travelRespository) {
+		this.travelRespository = travelRespository;
+	}
+	
+	//returns all travels
+	public List<Travel>allTravels() {
+		return travelRespository.findAll();
+	}
+
+}

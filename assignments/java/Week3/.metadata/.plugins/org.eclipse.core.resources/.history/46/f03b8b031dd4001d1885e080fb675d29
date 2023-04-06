@@ -1,0 +1,10 @@
+body {
+	background-color: #a96192;
+	font-family: "Sofia", sans-serif;
+}
+
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 50px;
+}

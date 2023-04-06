@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week2/FruityLoops/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4015790153.index
+/FruityLoops/src/main/java

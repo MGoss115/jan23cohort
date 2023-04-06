@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Home Page!</h1>
+	<p>
+		Your Gold: <c:out value="${count}" />
+	</p>
+	<form action="/farm" method="post">
+		<label for="farm"></label>
+	</form>
+</body>
+</html>

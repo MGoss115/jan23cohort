@@ -1,0 +1,10 @@
+package com.example.savetravels.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="travels")
+public class Travel {
+
+}

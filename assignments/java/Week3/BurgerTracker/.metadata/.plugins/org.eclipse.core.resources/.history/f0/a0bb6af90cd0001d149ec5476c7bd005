@@ -1,0 +1,5 @@
+package com.example.burgertracker.controllers;
+
+public class BurgerController {
+
+}

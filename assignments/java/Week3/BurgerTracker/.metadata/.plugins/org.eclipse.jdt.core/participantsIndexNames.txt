@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week3/BurgerTracker/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3018654201.index
+/BurgerTraker/src/main/java
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week3/BurgerTracker/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4054099336.index
+/BurgerTraker/src/main/java

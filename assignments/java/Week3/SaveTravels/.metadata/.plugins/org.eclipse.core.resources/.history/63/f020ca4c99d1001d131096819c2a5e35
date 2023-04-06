@@ -1,0 +1,5 @@
+package com.example.savetravels.repositories;
+
+public interface TravelRepository {
+
+}

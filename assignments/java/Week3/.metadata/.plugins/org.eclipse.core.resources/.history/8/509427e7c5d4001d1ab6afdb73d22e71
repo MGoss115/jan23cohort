@@ -1,0 +1,23 @@
+package com.example.bookclub.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.bookclub.models.User;
+import com.example.bookclub.repositories.UserRepository;
+
+@Service
+public class UserService {
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	// Get All
+	public List<User> getAllUsers() {
+	return userRepository.findAll();
+
+	}
+
+}

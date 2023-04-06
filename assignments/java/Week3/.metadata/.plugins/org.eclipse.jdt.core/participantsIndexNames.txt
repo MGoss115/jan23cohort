@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week3/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2743568307.index
+/BookClub/src/main/java
 /Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week3/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/77081002.index
 /Authentication/src/main/java

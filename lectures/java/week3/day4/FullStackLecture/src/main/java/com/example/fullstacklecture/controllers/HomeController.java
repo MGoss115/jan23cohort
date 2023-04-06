@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.fullstacklecture.models.LoginUser;
+import com.example.fullstacklecture.models.Puppy;
 import com.example.fullstacklecture.models.User;
 import com.example.fullstacklecture.services.PuppyServ;
 import com.example.fullstacklecture.services.UserServ;
@@ -90,12 +91,29 @@ public class HomeController {
     // ==========================
 	
 	@GetMapping("/dashboard")
-	public String dashboard(HttpSession session) {
+	public String dashboard(HttpSession session, @ModelAttribute("puppy") Puppy puppy, Model model) {
 		if(session.getAttribute("user_id") == null) {
 			return "redirect:/logReg";
 		} else {
-		
+		model.addAttribute("theUser", userServ.getUser((Long)session.getAttribute("user_id")));
+		model.addAttribute("allPups", pupServ.getAll());
 		return "dashboard.jsp";
+		}
+	}
+	
+	@GetMapping("/addPuppy")
+	public String addPuppy(@ModelAttribute("savePuppyForm") Puppy pup, Model model) {
+		
+		return "addPuppy.jsp";
+	}
+	
+	@PostMapping("/saveThePuppy")
+	public String saveThePuppy(@Valid @ModelAttribute("savePuppyForm") Puppy pup, BindingResult result, Model model) {
+		if(result.hasErrors()) {
+			return "addPuppy.jsp";
+		} else {
+			pupServ.savePup(pup);
+			return "redirect:/dashboard";
 		}
 	}
 }

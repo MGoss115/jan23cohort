@@ -9,7 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.example.fullstacklecture.models.LoginUser;
 import com.example.fullstacklecture.models.Puppy;
@@ -102,9 +104,12 @@ public class HomeController {
 	}
 	
 	@GetMapping("/addPuppy")
-	public String addPuppy(@ModelAttribute("savePuppyForm") Puppy pup, Model model) {
-		
+	public String addPuppy(HttpSession session, @ModelAttribute("savePuppyForm") Puppy pup, Model model) {
+		if(session.getAttribute("user_id") == null) {
+			return "redirect:/logReg";
+		} else {
 		return "addPuppy.jsp";
+		}
 	}
 	
 	@PostMapping("/saveThePuppy")
@@ -115,5 +120,41 @@ public class HomeController {
 			pupServ.savePup(pup);
 			return "redirect:/dashboard";
 		}
+	}
+	
+	@GetMapping("puppy/{id}/view")
+	public String viewPup(HttpSession session, @PathVariable("id") Long id, @ModelAttribute("puppy") Puppy puppy, Model model) {
+		if(session.getAttribute("user_id") == null) {
+			return "redirect:/logReg";
+		} else {
+		model.addAttribute("thePuppy", pupServ.getOne(id));
+		return "viewPuppy.jsp";
+		}
+	}
+	
+	@GetMapping("puppy/{id}/edit")
+	public String editPup(HttpSession session, @PathVariable("id") Long id, @ModelAttribute("editPuppyForm") Puppy puppy, Model model) {
+		if(session.getAttribute("user_id") == null) {
+			return "redirect:/logReg";
+		} else {
+		model.addAttribute("thePuppy", pupServ.getOne(id));
+		return "editPuppy.jsp";
+		}
+	}
+	@PutMapping("puppy/{id}/update")
+	public String updatePuppy(@PathVariable("id") Long id, @Valid @ModelAttribute("editPuppyForm") Puppy editPup, BindingResult result, Model model) {
+		if(result.hasErrors()) {
+			model.addAttribute("thePuppy", pupServ.getOne(id));
+			return "editPuppy.jsp";
+		} else {
+			pupServ.updateOne(editPup);
+			return "redirect:/puppy/{id}/view";
+		}
+	}
+	
+	@GetMapping("puppy/{id}/delete")
+	public String viewPup(@PathVariable("id") Long id) {
+		pupServ.deleteOne(id);
+		return "redirect:/dashboard";
 	}
 }

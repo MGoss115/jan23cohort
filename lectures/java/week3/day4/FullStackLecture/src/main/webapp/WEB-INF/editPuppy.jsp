@@ -10,7 +10,7 @@
 <html>
 <head>
 <!-- for Bootstrap CSS -->
-<!-- <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" /> -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
 <!-- YOUR own local CSS -->
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <!-- For any Bootstrap that uses JS -->
@@ -20,7 +20,7 @@
 </head>
 <body>
 	<header>
-		<h1>Hello, ${ theUser.firstName }</h1>
+		<h1>Hello</h1>
 		<nav>
 			<a href="/">Home</a>
 			<c:if test="${ user_id != null }">
@@ -34,28 +34,24 @@
 		</nav>
 	</header>
     <main>
-    	<div class="row">
-    		<div class="column">
-    			<h2>All Puppies</h2>
-    			<c:forEach items="${ allPups }" var="pup">
-    				<div class="column">
-    					<h3><a href="/puppy/${ pup.id }/view">${ pup.name }</a></h3>
-    					<p>Breed: ${ pup.breed } Owner: ${ pup.owner.firstName }</p>
-    				</div>
-    			</c:forEach>
-    		</div>
-    		<div class="column">
-    			<h2>Your Puppies, ${ theUser.firstName }</h2>
-    			<c:forEach items="${ allPups }" var="pup">
-    				<c:if test="${ user_id == pup.owner.id }">
-    					<div class="column">
-	    					<h3><a href="/puppy/${ pup.id }/view">${ pup.name }</a></h3>
-	    					<p>Breed: ${ pup.breed } Owner: ${ pup.owner.firstName }</p>
-	    				</div>
-    				</c:if>
-    			</c:forEach>
-    		</div>
-    	</div>
+    <h2>Save the Puppies</h2>
+    	<form:form action="/puppy/${ thePuppy.id }/update" method="post" modelAttribute="editPuppyForm">
+    		<input type="hidden" name="_method" value="put"/>
+    		<section>
+    			<label for="name">Name your Puppy</label>
+    			<input type="text" name="name" id="" value="${ thePuppy.name }"/>
+    			<form:errors path="name" class="text-danger" />
+    		</section>
+    		<section>
+    			<label for="breed">The Puppy's Breed</label>
+    			<input type="text" name="breed" id="" value="${ thePuppy.breed }" />
+    			<form:errors path="breed" class="text-danger" />
+    		</section>
+    		<section>
+    			<input type="hidden" name="owner" value="${ user_id }" />
+    		</section>
+    		<button>Update Puppy</button>
+    	</form:form>
     </main>
     <footer>
     

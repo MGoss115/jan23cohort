@@ -18,7 +18,7 @@
 <!-- My CSS -->
 <link rel='stylesheet' href='/css/styles.css'>
 <meta charset="UTF-8">
-<title>Our Family Pets</title>
+<title>Products and Categories</title>
 </head>
 <body>
 	<header>

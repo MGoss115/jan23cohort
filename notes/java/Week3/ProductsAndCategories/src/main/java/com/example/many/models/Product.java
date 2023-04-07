@@ -16,6 +16,7 @@ import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -31,9 +32,8 @@ public class Product {
 	@NotBlank
     @Size(min = 5, max = 200)
     private String name;
-    @NotBlank
-    @Size(min = 5, max = 200)
-    private Integer price;
+    @NotNull
+    private Double price;
     @NotBlank
     @Size(min = 3, max = 40)
     private String description;
@@ -87,11 +87,11 @@ public class Product {
 		this.name = name;
 	}
 
-	public Integer getPrice() {
+	public Double getPrice() {
 		return price;
 	}
 
-	public void setPrice(Integer price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 

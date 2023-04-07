@@ -11,7 +11,8 @@ import com.example.many.models.Product;
 @Repository
 public interface CategoryRepository extends CrudRepository<Category, Long> {
 	
-	  // Retrieves a list of all categories for a particular product
+	List<Category> findAll();
+	// Retrieves a list of all categories for a particular product
     List<Category> findAllByProducts(Product product);
     
     // Retrieves a list of any categories a particular product

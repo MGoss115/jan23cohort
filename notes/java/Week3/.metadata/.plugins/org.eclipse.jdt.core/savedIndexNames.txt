@@ -1,7 +1,6 @@
 INDEX VERSION 1.131+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/notes/java/Week3/.metadata/.plugins/org.eclipse.jdt.core
-1002033209.index
-1865797976.index
-783965325.index
-1014641858.index
-2677814810.index
+3485030393.index
 447945584.index
+783965325.index
+1865797976.index
+1002033209.index

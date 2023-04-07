@@ -1,0 +1,5 @@
+package com.example.many.models;
+
+public class Product {
+
+}

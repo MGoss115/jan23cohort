@@ -23,7 +23,7 @@
 				<a href="/logout">Logout</a>
 			</c:if>
 			<c:if test="${ user_id == null }">
-				<a href="/logReg">Login</a>
+				<a href="/">Login</a>
 			</c:if>
 		</nav>
 	</header>

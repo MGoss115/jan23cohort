@@ -20,7 +20,6 @@
 </head>
 <body>
 	<header>
-		<h1>Hello</h1>
 		<nav>
 			<c:if test="${ user_id != null }">
 				<a href="/dashboard">Dashboard</a>
@@ -39,8 +38,11 @@
     	<c:out value="${oneBook.author}" /></h3>
     	<h3>Here are <c:out value="${oneBook.owner.firstName}" /> thoughts: <c:out value="${oneBook.description}" /></h3>
     	<c:if test="${ user_id == oneBook.owner.id }">
-    		<a href="/edit${ oneBook.id }">Edit Info</a>
-    		<a href="/delete">Delete</a>
+    		<a href="/books/${oneBook.id}/edit">Edit Info</a>
+    		<form action="/book/${oneBook.id}" method="post">
+			<input type="hidden" name="_method" value="delete"/>
+			<button value="Delete">Delete</button>
+		</form>
     	</c:if>
     </main>
     <footer>

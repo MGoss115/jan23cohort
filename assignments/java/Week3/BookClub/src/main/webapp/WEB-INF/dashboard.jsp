@@ -50,7 +50,7 @@ table, th, td {
 			<c:forEach var="b" items="${books}">
 				<tr>
 					<td><c:out value="${b.id}"></c:out></td>
-					<td><a href="/view/${ b.id }"><c:out value="${b.title}"></c:out></a></td>
+					<td><a href="/book/${ b.id }"><c:out value="${b.title}"></c:out></a></td>
 					<td><c:out value="${b.author}"></c:out></td>
 					<td><c:out value="${b.owner.firstName}"></c:out></td>
 				</tr>

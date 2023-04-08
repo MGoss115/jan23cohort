@@ -1,0 +1,46 @@
+package com.example.many.controllers;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.example.many.models.Category;
+import com.example.many.services.CategoryService;
+
+@Controller
+public class CategoryController {
+	
+	@Autowired
+	private CategoryService categoryService;
+	
+	@GetMapping("/")
+	public String index(@ModelAttribute("category") Category category, Model model) {
+		List<Category> categories = categoryService.getAllCat();
+		model.addAttribute("categories", categories);
+		return "index.jsp";
+	}
+	
+	@GetMapping("/newCat")
+	public String addCat(@ModelAttribute("category") Category category, Model model) {
+		return "addCat.jsp";
+	}
+	
+	@PostMapping("/createCat")
+	public String createCat(@Valid @ModelAttribute("category") Category category, BindingResult result, Model model) {
+		if(result.hasErrors()) {
+			return "addCat.jsp";
+		} else {
+			categoryService.create(category);
+			return "redirect:/";
+		}
+	}
+
+}

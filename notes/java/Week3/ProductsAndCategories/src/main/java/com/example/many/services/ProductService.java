@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.many.models.Category;
 import com.example.many.models.Product;
 import com.example.many.repositories.ProductRepository;
 
@@ -36,6 +37,14 @@ public class ProductService {
     		return null;
     	}
     }
+    
+	public List<Product> getAssignedProducts(Category category){
+		return productRepository.findAllByCategories(category);
+	}
+	
+	public List<Product> getUnassignedProducts(Category category){
+		return productRepository.findByCategoriesNotContains(category);
+	}
     
   //delete a book
   	public void deleteProduct(Long id) {

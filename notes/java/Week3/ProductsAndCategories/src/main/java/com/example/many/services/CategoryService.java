@@ -32,11 +32,11 @@ public class CategoryService {
 		}
 	}
 	
-	public List<Category> findByProducts(Product product) {
+	public List<Category> findByCategories(Product product) {
 		return categoryRepository.findAllByProducts(product);
 	}
 	
-	public List<Category> findByNotContains(Product product) {
+	public List<Category> findByNotContainsCategories(Product product) {
 		return categoryRepository.findByProductsNotContains(product);
 	}
 	

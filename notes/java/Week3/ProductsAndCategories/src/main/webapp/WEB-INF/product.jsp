@@ -30,17 +30,16 @@
 		</c:forEach>
 		</section>
 		<section>
-		<form:form action="/product/${product.id }" method="post" modelAttribute="products">
-			<input type="hidden" name="_method" value="put">
+		<form action="/product/${product.id }" method="post">
 			<p>
-				<select name="categoryId" id="categoryId" class="input">
+				<select name="categoryId" id="categoryId">
 	   			 	<c:forEach var="c" items="${category}">
 	    				<option value="${c.id}">${c.name}</option>
 	    			</c:forEach>
 				</select>
 		    </p>  
 		    <button>Submit</button>
-		</form:form> 
+		</form> 
 		</section>
 	</div>
 

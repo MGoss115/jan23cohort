@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.many.models.Category;
 import com.example.many.models.Product;
@@ -57,14 +57,13 @@ public class ProductController {
 		return "product.jsp";
 	}
 	
-	@PutMapping("/product/{id}")
-	public String update(@Valid @ModelAttribute("product") Product product, BindingResult result, Model model) {
-		if (result.hasErrors()) {
-			return "/product.jsp";
-		} else {
-			productService.updateProd(product);
-			return "redirect:/";
-		}
+	@PostMapping("/product/{id}")
+	public String update(@PathVariable("id") Long id, @RequestParam("categoryId") Long categoryId, Model model) {
+		Product product = productService.findProduct(id);
+		Category category = categoryService.findCategory(categoryId);
+		product.getCategories().add(category);
+		productService.updateProd(product);
+		return "redirect:/product/"+id;
 	}
 
 }

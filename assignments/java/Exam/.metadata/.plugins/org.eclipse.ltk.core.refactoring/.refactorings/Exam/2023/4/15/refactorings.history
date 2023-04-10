@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.example.exam.controllers.Home&apos; to &apos;UserController&apos;&#x0A;- Original project: &apos;Exam&apos;&#x0A;- Original element: &apos;com.example.exam.controllers.Home&apos;&#x0A;- Renamed element: &apos;com.example.exam.controllers.UserController&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Home&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.exam.controllers{Home.java[Home" matchStrategy="1" name="UserController" qualified="false" references="true" similarDeclarations="false" stamp="1681147785630" textual="false" version="1.0"/>
+</session>

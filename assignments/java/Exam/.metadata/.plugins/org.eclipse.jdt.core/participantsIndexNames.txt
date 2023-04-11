@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Exam/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1095388421.index
-/Exam/src/main/java

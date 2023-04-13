@@ -1,8 +1,5 @@
 INDEX VERSION 1.4+/Users/markebtaligon/Desktop/CodingDojo/jan23cohort/assignments/java/Week3/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-126444528.index
-1430573026.index
-1629459035.index
 3925161478.index
+3007295035.index
 2212434883.index
-2650367187.index
-939898242.index
+4229664691.index

@@ -1,6 +1,0 @@
-package com.example.authentication.controllers;
-
-@Controller
-public class User {
-
-}
